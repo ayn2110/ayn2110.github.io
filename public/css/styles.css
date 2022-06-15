@@ -2,3 +2,9 @@ body{
     background-color: lightgray;
     color:green;
 }
+
+h1{
+    font-size:40px ;
+    font-weight: 700;
+    color: red;
+}
