@@ -116,3 +116,21 @@ h2 {
   font-size: 2em;
   margin: 60px auto 30px auto;
 }
+
+footer {
+  background: #bdb3a7;
+  padding: 40px 0 40px 0;
+}
+
+dt {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+dd {
+  margin-bottom: 4px;
+}
+
+dd > a {
+  color: #696363;
+}
