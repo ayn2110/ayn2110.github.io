@@ -15,18 +15,22 @@ body {
   margin: 0;
 }
 
+.container {
+  margin: auto;
+  width: 90%;
+  max-width: 1140px;
+}
+
+header {
+  background-color: #1f1f20;
+}
+
 header > .container > h1 {
   padding-top: 20px;
 }
 
 header > .container > h1 > a {
-  color: #9c3232;
-}
-
-.container {
-  margin: auto;
-  width: 90%;
-  max-width: 1140px;
+  color: #bdb3a7;
 }
 
 header > .container > nav > ul {
@@ -40,7 +44,7 @@ header > .container > nav > ul > li {
 
 header > .container > nav > ul > li > a {
   line-height: 60px;
-  color: #9c3232;
+  color: #bdb3a7;
   font-size: 1.2em;
   letter-spacing: 2px;
 }

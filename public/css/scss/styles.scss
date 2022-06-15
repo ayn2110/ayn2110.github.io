@@ -1,4 +1,4 @@
-$primary-color:#9c3232;
+$primary-color:#bdb3a7;
 
 *{
     margin: 0;
@@ -15,8 +15,15 @@ body{
     margin: 0;
 }
 
+.container{
+    margin: auto;
+    width: 90%;
+    max-width: 1140px;
+    // background-color: orange;
+}
+
 header{
-    // background-color: green;
+    background-color: #1f1f20;
 }
 header>.container>h1{
     padding-top:20px;
@@ -24,12 +31,7 @@ header>.container>h1{
 header>.container>h1>a{
     color:$primary-color;
 }
-.container{
-    margin: auto;
-    width: 90%;
-    max-width: 1140px;
-    // background-color: orange;
-}
+
 header>.container>nav>ul{
     display: flex;
     /* justify-content: space-between; */
