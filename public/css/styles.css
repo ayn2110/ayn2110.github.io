@@ -101,3 +101,18 @@ header > .container > nav > ul > li > a {
   margin: 0px 15px 40px 15px;
   /*上右下左*/
 }
+
+.title a {
+  color: black;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.date {
+  color: #bdb3a7;
+}
+
+h2 {
+  font-size: 2em;
+  margin: 60px auto 30px auto;
+}
