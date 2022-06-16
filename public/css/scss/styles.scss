@@ -158,3 +158,17 @@ dd>a{
 .w-80{
     width: 80%;
 }
+
+.btn-primary{
+    background-color: $primary-color;
+    padding: 15px;
+    color:black;
+    display: block;
+    margin-bottom:5px;
+    border-radius: 4px;
+    text-align: center;
+}
+.btn-primary:hover{
+    background: black;
+    color:$primary-color;
+}
