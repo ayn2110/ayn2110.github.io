@@ -109,7 +109,7 @@ header > .container > nav > ul > li > a {
 }
 
 .col-9 {
-  width: calc(100% / 1.333333 - 30px);
+  width: calc(100% / 1.33333333333 - 30px);
   margin: 0px 15px 40px 15px;
   /*上右下左*/
 }
@@ -179,4 +179,39 @@ dd > a {
 .btn-primary:hover {
   background: black;
   color: #bdb3a7;
+}
+
+.text-primary {
+  color: #bdb3a7;
+}
+
+.img-wrap {
+  display: block;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.img-overlay {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.img-wrap img {
+  vertical-align: top;
+  transition: all 0.5s;
+}
+
+.img-wrap img:hover {
+  transform: scale(1.5);
+}
+
+.icon-new {
+  position: absolute;
+  width: 50px;
+  line-height: 50px;
+  color: white;
+  border-radius: 100%;
+  left: -25px;
+  top: -25px;
+  background-color: green;
 }
