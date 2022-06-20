@@ -84,17 +84,13 @@ header>.container>nav>ul>li>a{
     flex-wrap: wrap; /*換行*/
 }
 
-.col-3{
-    width: calc(100% / 4 - 30px);
-    margin:0px 15px 40px 15px;
-    /*上右下左*/
-}
+
 
 @for $i from 1 through 12 {
     .col-#{$i}{
         --num: calc(12 / #{$i});
-        width: calc(100% / var(--num) - 10px);
-        margin: 0px 10px 40px 10px;
+        width: calc(100% / var(--num) - 30px);
+        margin: 0px 15px 40px 15px;
     }
 }
 

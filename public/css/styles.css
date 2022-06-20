@@ -84,82 +84,76 @@ header > .container > nav > ul > li > a {
   /*換行*/
 }
 
-.col-3 {
-  width: calc(100% / 4 - 30px);
-  margin: 0px 15px 40px 15px;
-  /*上右下左*/
-}
-
 .col-1 {
   --num: calc(12 / 1);
-  width: calc(100% / var(--num) - 10px);
-  margin: 0px 10px 40px 10px;
+  width: calc(100% / var(--num) - 30px);
+  margin: 0px 15px 40px 15px;
 }
 
 .col-2 {
   --num: calc(12 / 2);
-  width: calc(100% / var(--num) - 10px);
-  margin: 0px 10px 40px 10px;
+  width: calc(100% / var(--num) - 30px);
+  margin: 0px 15px 40px 15px;
 }
 
 .col-3 {
   --num: calc(12 / 3);
-  width: calc(100% / var(--num) - 10px);
-  margin: 0px 10px 40px 10px;
+  width: calc(100% / var(--num) - 30px);
+  margin: 0px 15px 40px 15px;
 }
 
 .col-4 {
   --num: calc(12 / 4);
-  width: calc(100% / var(--num) - 10px);
-  margin: 0px 10px 40px 10px;
+  width: calc(100% / var(--num) - 30px);
+  margin: 0px 15px 40px 15px;
 }
 
 .col-5 {
   --num: calc(12 / 5);
-  width: calc(100% / var(--num) - 10px);
-  margin: 0px 10px 40px 10px;
+  width: calc(100% / var(--num) - 30px);
+  margin: 0px 15px 40px 15px;
 }
 
 .col-6 {
   --num: calc(12 / 6);
-  width: calc(100% / var(--num) - 10px);
-  margin: 0px 10px 40px 10px;
+  width: calc(100% / var(--num) - 30px);
+  margin: 0px 15px 40px 15px;
 }
 
 .col-7 {
   --num: calc(12 / 7);
-  width: calc(100% / var(--num) - 10px);
-  margin: 0px 10px 40px 10px;
+  width: calc(100% / var(--num) - 30px);
+  margin: 0px 15px 40px 15px;
 }
 
 .col-8 {
   --num: calc(12 / 8);
-  width: calc(100% / var(--num) - 10px);
-  margin: 0px 10px 40px 10px;
+  width: calc(100% / var(--num) - 30px);
+  margin: 0px 15px 40px 15px;
 }
 
 .col-9 {
   --num: calc(12 / 9);
-  width: calc(100% / var(--num) - 10px);
-  margin: 0px 10px 40px 10px;
+  width: calc(100% / var(--num) - 30px);
+  margin: 0px 15px 40px 15px;
 }
 
 .col-10 {
   --num: calc(12 / 10);
-  width: calc(100% / var(--num) - 10px);
-  margin: 0px 10px 40px 10px;
+  width: calc(100% / var(--num) - 30px);
+  margin: 0px 15px 40px 15px;
 }
 
 .col-11 {
   --num: calc(12 / 11);
-  width: calc(100% / var(--num) - 10px);
-  margin: 0px 10px 40px 10px;
+  width: calc(100% / var(--num) - 30px);
+  margin: 0px 15px 40px 15px;
 }
 
 .col-12 {
   --num: calc(12 / 12);
-  width: calc(100% / var(--num) - 10px);
-  margin: 0px 10px 40px 10px;
+  width: calc(100% / var(--num) - 30px);
+  margin: 0px 15px 40px 15px;
 }
 
 @media (min-width: 768px) {
