@@ -8,8 +8,9 @@ head
 // header start
 // header>.container>h1{Ayn's Portfolio}+nav>ul>li*4>a[href="#"]{文字}
 body
-    header
+    header.overflow-hidden
         .container
+            a.icon-menu(href="#") menu
             h1
                 a(href='index.html') Ayn's Portfolio
             nav
@@ -26,61 +27,61 @@ body
         // content start
     .container
         .row
-            ul.breadcrumb
+            ul.col-12.breadcrumb
                 li
                     a(href="") 首頁
                 li
                     a(href="") 平面設計
-            aside.col-3
+            aside.col-12.col-md-3.col-lg-2
                 ul
                     li
-                        a.btn-primary(href='') &#x5168;&#x90E8;
+                        a.btn-primary(href='') 全部
                     li
-                        a.btn-primary(href='') &#x54C1;&#x724C;&#x8A2D;&#x8A08;
+                        a.btn-primary(href='') 品牌設計
                     li
-                        a.btn-primary(href='') &#x5305;&#x88DD;&#x8A2D;&#x8A08;
+                        a.btn-primary(href='') 包裝設計
                     li
-                        a.btn-primary(href='') &#x63D2;&#x756B;&#x8A2D;&#x8A08;
-            main.col-9
+                        a.btn-primary(href='') 插畫設計
+            main.col-12.col-md-9.col-lg-10
                 .row
                     // work start
-                    .col-4.text-center
+                    .col-12.col-md-4.text-center
                         a.img-wrap(href='#')
                             .img-overlay
-                            img.img-fluid.img-rounded(src='https://baconmockup.com/300/200' alt='')
-                            span.icon-new NEW
+                                img.img-fluid.img-rounded(src='https://baconmockup.com/300/200' alt='')
+                                span.icon-new NEW
                         a.text-primary(href='#') &#x4F5C;&#x54C1;&#x6A19;&#x984C;1
                     // work end
                     // work start
-                    .col-4.text-center
+                    .col-12.col-md-4.text-center
                         a.img-wrap(href='#')
                             .img-overlay
-                            img.img-fluid.img-rounded(src='https://baconmockup.com/300/200' alt='')
-                            span.icon-new NEW
+                                img.img-fluid.img-rounded(src='https://baconmockup.com/300/200' alt='')
+                                span.icon-new NEW
                         a.text-primary(href='#') &#x4F5C;&#x54C1;&#x6A19;&#x984C;1
                     // work end
                     // work start
-                    .col-4.text-center
+                    .col-12.col-md-4.text-center
                         a.img-wrap(href='#')
                             .img-overlay
-                            img.img-fluid.img-rounded(src='https://baconmockup.com/300/200' alt='')
-                            span.icon-new NEW
+                                img.img-fluid.img-rounded(src='https://baconmockup.com/300/200' alt='')
+                                span.icon-new NEW
                         a.text-primary(href='#') &#x4F5C;&#x54C1;&#x6A19;&#x984C;1
                     // work end
                     // work start
-                    .col-4.text-center
+                    .col-12.col-md-4.text-center
                         a.img-wrap(href='#')
                             .img-overlay
-                            img.img-fluid.img-rounded(src='https://baconmockup.com/300/200' alt='')
-                            span.icon-new NEW
+                                img.img-fluid.img-rounded(src='https://baconmockup.com/300/200' alt='')
+                                span.icon-new NEW
                         a.text-primary(href='#') &#x4F5C;&#x54C1;&#x6A19;&#x984C;1
                     // work end
                     // work start
-                    .col-4.text-center
+                    .col-12.col-md-4.text-center
                         a.img-wrap(href='#')
                             .img-overlay
-                            img.img-fluid.img-rounded(src='https://baconmockup.com/300/200' alt='')
-                            span.icon-new NEW
+                                img.img-fluid.img-rounded(src='https://baconmockup.com/300/200' alt='')
+                                span.icon-new NEW
                         a.text-primary(href='#') &#x4F5C;&#x54C1;&#x6A19;&#x984C;1
                     // work end
         // content end
@@ -91,42 +92,42 @@ body
             dl.col-3
                 dt &#x6A19;&#x984C;01
                 dd
-                a(href='#') &#x9805;&#x76EE;01
+                    a(href='#') &#x9805;&#x76EE;01
                 dd
-                a(href='#') &#x9805;&#x76EE;02
+                    a(href='#') &#x9805;&#x76EE;02
                 dd
-                a(href='#') &#x9805;&#x76EE;03
+                    a(href='#') &#x9805;&#x76EE;03
                 dd
-                a(href='#') &#x9805;&#x76EE;04
+                    a(href='#') &#x9805;&#x76EE;04
             dl.col-3
                 dt &#x6A19;&#x984C;02
                 dd
-                a(href='#') &#x9805;&#x76EE;01
+                    a(href='#') &#x9805;&#x76EE;01
                 dd
-                a(href='#') &#x9805;&#x76EE;02
+                    a(href='#') &#x9805;&#x76EE;02
                 dd
-                a(href='#') &#x9805;&#x76EE;03
+                    a(href='#') &#x9805;&#x76EE;03
                 dd
-                a(href='#') &#x9805;&#x76EE;04
+                    a(href='#') &#x9805;&#x76EE;04
             dl.col-3
                 dt &#x6A19;&#x984C;03
                 dd
-                a(href='#') &#x9805;&#x76EE;01
+                    a(href='#') &#x9805;&#x76EE;01
                 dd
-                a(href='#') &#x9805;&#x76EE;02
+                    a(href='#') &#x9805;&#x76EE;02
                 dd
-                a(href='#') &#x9805;&#x76EE;03
+                    a(href='#') &#x9805;&#x76EE;03
                 dd
-                a(href='#') &#x9805;&#x76EE;04
+                    a(href='#') &#x9805;&#x76EE;04
             dl.col-3
                 dt &#x6A19;&#x984C;04
                 dd
-                a(href='#') &#x9805;&#x76EE;01
+                    a(href='#') &#x9805;&#x76EE;01
                 dd
-                a(href='#') &#x9805;&#x76EE;02
+                    a(href='#') &#x9805;&#x76EE;02
                 dd
-                a(href='#') &#x9805;&#x76EE;03
+                    a(href='#') &#x9805;&#x76EE;03
                 dd
-                a(href='#') &#x9805;&#x76EE;04
+                    a(href='#') &#x9805;&#x76EE;04
             p.copyright.text-center &#x672C;&#x7AD9;&#x50C5;&#x4F9B;&#x5B78;&#x7FD2;&#x4F7F;&#x7528;&#xFF0C;&#x4E0D;&#x7528;&#x65BC;&#x5546;&#x696D;&#x7528;&#x9014;&#x3002;
 
