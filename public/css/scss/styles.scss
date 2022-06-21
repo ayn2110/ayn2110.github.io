@@ -279,7 +279,16 @@ dd>a{
     header > .container nav > ul > li > a{
         display: block;
     }
-    
+    .submenu{
+        background-color: $primary-color;
+    }
+    .submenu>li{
+        line-height: 60px;
+        border-bottom:1px solid black;
+    }
+    .submenu>li>a{
+        color:black;
+    }
 } // max-width 767 end
 
 // 超過768px以上執行 start 
