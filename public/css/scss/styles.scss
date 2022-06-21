@@ -49,7 +49,11 @@ header>.container nav>ul>li>a{
     font-size: 1.2em;
     letter-spacing: 2px;
 }
-
+@media (min-width:768px){
+    header>.container nav{
+        width: 100%;
+    }
+}//min-width 768 end
 // ====================================
 // 內容區塊
 // ====================================
@@ -255,7 +259,7 @@ dd>a{
         // viewport width
         left:0px;
         // 這一行等二層選單做完之後在打開
-        // left:-100vw;
+        left:-100vw;
         transition: all .3s;
     }
     // 之後搭配javascript要改寫選取器的寫法

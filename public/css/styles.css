@@ -50,6 +50,11 @@ header > .container nav > ul > li > a {
   letter-spacing: 2px;
 }
 
+@media (min-width: 768px) {
+  header > .container nav {
+    width: 100%;
+  }
+}
 .img-fluid {
   width: 100%;
 }
@@ -436,6 +441,7 @@ dd > a {
 
   nav {
     left: 0px;
+    left: -100vw;
     transition: all 0.3s;
   }
 
