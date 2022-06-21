@@ -241,16 +241,21 @@ dd>a{
         top:60px;
         background-color: black;
         // display: none;
+        // 需要蓋板的話打開以下程式碼
+        // position: fixed;
+        // top:0px;
+        // height: 100vh;
+        // z-index: 999;
     }
     nav{
         // viewport width
-        left:-100vw;
-        // opacity: 0;
+        left:0px;
+        // 這一行等二層選單做完之後在打開
+        // left:-100vw;
         transition: all .3s;
     }
     .icon-menu:hover + nav{
         left:0px;
-        // opacity: 1;
     }
     header > .container nav.active{
         display: block;
