@@ -59,12 +59,26 @@ header > .container nav > ul > li > a {
     position: relative;
   }
 
+  header > .container nav > ul > li:hover .submenu {
+    display: block;
+  }
+
   .submenu {
     position: absolute;
-    background-color: green;
+    background-color: #bdb3a7;
     width: 160%;
     left: 0px;
     top: 60px;
+    padding: 10px;
+    display: none;
+  }
+
+  .submenu > li {
+    line-height: 40px;
+  }
+
+  .submenu > li > a {
+    color: black;
   }
 }
 .img-fluid {

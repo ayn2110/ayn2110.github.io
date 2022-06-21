@@ -56,13 +56,24 @@ header>.container nav>ul>li>a{
     header>.container nav>ul>li{
         position: relative;
     }
+    header>.container nav>ul>li:hover .submenu{
+        display: block;
+    }
     .submenu{
         position: absolute;
-        background-color: green;
+        background-color: $primary-color;
         width: 160%;
         left: 0px;
         // bottom:0px;
         top:60px;
+        padding:10px;
+        display: none;
+    }
+    .submenu>li{
+        line-height: 40px;
+    }
+    .submenu>li>a{
+        color:black;
     }
 
 }//min-width 768 end
