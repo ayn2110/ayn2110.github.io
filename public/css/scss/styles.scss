@@ -279,8 +279,13 @@ dd>a{
     header > .container nav > ul > li > a{
         display: block;
     }
+    
     .submenu{
+        display: none;
         background-color: $primary-color;
+    }
+    header > .container nav > ul > li:hover .submenu{
+        display: block;
     }
     .submenu>li{
         line-height: 60px;

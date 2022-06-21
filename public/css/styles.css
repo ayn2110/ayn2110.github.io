@@ -462,7 +462,12 @@ dd > a {
   }
 
   .submenu {
+    display: none;
     background-color: #bdb3a7;
+  }
+
+  header > .container nav > ul > li:hover .submenu {
+    display: block;
   }
 
   .submenu > li {
