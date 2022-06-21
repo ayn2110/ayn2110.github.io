@@ -39,10 +39,6 @@ header > .container nav > ul {
   /* justify-content: space-between; */
 }
 
-header > .container nav > ul > li {
-  margin-right: 30px;
-}
-
 header > .container nav > ul > li > a {
   line-height: 60px;
   color: #bdb3a7;
@@ -67,11 +63,26 @@ header > .container nav > ul > li > a {
     position: relative;
   }
 
-  header h1 {
+  header > .container h1 {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    background-color: green;
+    line-height: 60px;
+    padding-top: 0px;
+  }
+
+  header nav {
+    display: flex;
+    justify-content: center;
+  }
+
+  header > .container nav > ul > li {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  header > .container nav > ul > li:nth-child(2) {
+    margin-right: 210px;
   }
 
   .submenu {

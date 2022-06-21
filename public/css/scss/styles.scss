@@ -41,7 +41,8 @@ header>.container nav>ul{
     /* justify-content: space-between; */
 }
 header>.container nav>ul>li{
-    margin-right: 30px;
+    // 若置中的話不寫下面這一行
+    // margin-right: 30px;
 }
 header>.container nav>ul>li>a{
     line-height: 60px;
@@ -59,16 +60,34 @@ header>.container nav>ul>li>a{
     header>.container nav>ul>li:hover .submenu{
         display: block;
     }
+    // 置中logo start
     header{
         position: relative;
     }
-    header h1{
+    header > .container h1{
         position: absolute;
         left:50%;
         // margin-left: -102px;
         transform: translateX(-50%);
-        background-color: green;
+        // background-color: green;
+        line-height: 60px;
+        padding-top: 0px;
     }
+    header nav{
+        display: flex;
+        justify-content: center;
+    }
+    header>.container nav>ul>li{
+        margin-left:20px;
+        margin-right: 20px;
+    }
+    header>.container nav>ul>li:nth-child(2){
+        margin-right: 210px;
+    }
+
+
+    // 置中logo end
+
     .submenu{
         position: absolute;
         background-color: $primary-color;
@@ -87,6 +106,19 @@ header>.container nav>ul>li>a{
     }
 
 }//min-width 768 end
+
+// 針對超過1200視窗寬的優化 start
+// @media (min-width:1200px){
+//     header>.container nav>ul>li{
+//         margin-left:30px;
+//         margin-right: 30px;
+//     }
+//     header>.container nav>ul>li:nth-child(2){
+//         margin-right: 300px;
+//     }
+// }
+// 針對超過1200視窗寬的優化 end
+
 // ====================================
 // 內容區塊
 // ====================================
