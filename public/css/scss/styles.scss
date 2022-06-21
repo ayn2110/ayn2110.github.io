@@ -53,6 +53,18 @@ header>.container nav>ul>li>a{
     header>.container nav{
         width: 100%;
     }
+    header>.container nav>ul>li{
+        position: relative;
+    }
+    .submenu{
+        position: absolute;
+        background-color: green;
+        width: 160%;
+        left: 0px;
+        // bottom:0px;
+        top:60px;
+    }
+
 }//min-width 768 end
 // ====================================
 // 內容區塊
