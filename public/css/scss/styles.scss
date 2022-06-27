@@ -328,7 +328,8 @@ dd>a{
         transition: all .3s;
     }
     // 之後搭配javascript要改寫選取器的寫法
-    .icon-menu:hover + nav{
+    // 20220627 修改後的類別為nav.active
+    nav.active{
         left:0px;
 
         // 需要從上往下出現導覽時打開以下程式碼

@@ -4,7 +4,7 @@ html
     meta(charset='UTF-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    title Ayn's Portfolio
+    title Ayn's Portfoliosdafsdf
     link(rel='stylesheet', href='public/css/styles.css')
   body
     header
@@ -12,8 +12,10 @@ html
         .row.flex-space-between
           h1
             a(href='index.html') Ayn's Portfolio
-          a.icon-menu(href="#") menu
-          nav
+          // 20220627 追加#btn-nav-toggle
+          a#btn-nav-toggle.icon-menu(href="#") menu
+          // 20220627 追加#primary-navigation
+          nav#primary-navigation
             ul
               li
                   a(href='about-us.html') 關於我
@@ -25,6 +27,7 @@ html
                     li
                       a(href="design-list.html") 包裝設計
               li
+            
                   a(href='#') 網頁設計
                   ul.submenu
                     li
@@ -115,4 +118,7 @@ html
               a(href='#') &#x9805;&#x76EE;03
             dd
               a(href='#') &#x9805;&#x76EE;04
-        p.copyright.text-center &#x672C;&#x7AD9;&#x50C5;&#x4F9B;&#x5B78;&#x7FD2;&#x4F7F;&#x7528;&#xFF0C;&#x4E0D;&#x7528;&#x65BC;&#x5546;&#x696D;&#x7528;&#x9014;&#x3002;
+      p.copyright.text-center &#x672C;&#x7AD9;&#x50C5;&#x4F9B;&#x5B78;&#x7FD2;&#x4F7F;&#x7528;&#xFF0C;&#x4E0D;&#x7528;&#x65BC;&#x5546;&#x696D;&#x7528;&#x9014;&#x3002;
+    
+    // 20220627 追加掛載外部腳本檔  
+    script(src="public/js/script.js") 
