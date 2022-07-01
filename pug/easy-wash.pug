@@ -5,13 +5,13 @@ html
         meta(http-equiv='X-UA-Compatible', content='IE=edge')
         meta(name='viewport', content='width=device-width, initial-scale=1.0')
         title EASY WASH
-        link(rel='stylesheet', href='public/css/easy_wash_styles.css')
+        link(rel='stylesheet', href='public/css/easy-wash-styles.css')
     body
         header
             div.container
                 .row
                     h1
-                        a.logo(href="easy_wash.html") easy wash
+                        a.logo(href="easy-wash.html") easy wash
                             //- img
                     a#btn-nav-switch.icon-menu.display-md-none(href="javascript:;") menu
                     nav
@@ -22,11 +22,16 @@ html
                                 a(href="javascript:;") 產品列表
                                 ul.submenu
                                     li
-                                        a(href="product_list.html") 分類1
+                                        a(href="product-list.html") 分類1
                                     li
-                                        a(href="product_list.html") 分類2
+                                        a(href="product-list.html") 分類2
                             li
-                                a(href="testimonial.html") 顧客心得
+                                a(href="javascrip:;") 顧客心得
+                                ul.submenu
+                                    li
+                                        a(href="testimonial.html") 分類1
+                                    li
+                                        a(href="testimonial.html") 分類2
                             li
                                 a(href="faq.html") 常見問題
         div.banner
@@ -77,3 +82,4 @@ html
 
 
         script(src="https://code.jquery.com/jquery-3.6.0.min.js",integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=",crossorigin="anonymous")
+        script(src="public/js/easy-wash-script.js")

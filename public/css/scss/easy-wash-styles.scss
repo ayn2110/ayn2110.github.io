@@ -63,6 +63,15 @@ body{
             margin: 0px 15px 0px 15px;
         }
     }
+    @for $i from 1 through 12 {
+
+        .offset-md-#{$i}{
+            --num: calc(12 / #{$i});
+            margin-left: calc(100% / var(--num) - 30px);
+        }
+    }
+
+
 } // 768px end
 
 @media (min-width:1200px){
@@ -175,9 +184,17 @@ header>.container>.row{
     }
     nav>ul>li{
         margin-right: 40px;
+        position: relative;
+        line-height: 40px;
     }
     .submenu{
         display: none;
+        position: absolute;
+        top:40px;
+        left:0;
+        width: 100%;
+        background-color: $primary-color;
+        padding:10px;
     }
     .submenu.active{
         display: block;

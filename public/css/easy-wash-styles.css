@@ -192,6 +192,66 @@ body {
     width: calc(100% / var(--num) - 30px);
     margin: 0px 15px 0px 15px;
   }
+
+  .offset-md-1 {
+    --num: calc(12 / 1);
+    margin-left: calc(100% / var(--num) - 30px);
+  }
+
+  .offset-md-2 {
+    --num: calc(12 / 2);
+    margin-left: calc(100% / var(--num) - 30px);
+  }
+
+  .offset-md-3 {
+    --num: calc(12 / 3);
+    margin-left: calc(100% / var(--num) - 30px);
+  }
+
+  .offset-md-4 {
+    --num: calc(12 / 4);
+    margin-left: calc(100% / var(--num) - 30px);
+  }
+
+  .offset-md-5 {
+    --num: calc(12 / 5);
+    margin-left: calc(100% / var(--num) - 30px);
+  }
+
+  .offset-md-6 {
+    --num: calc(12 / 6);
+    margin-left: calc(100% / var(--num) - 30px);
+  }
+
+  .offset-md-7 {
+    --num: calc(12 / 7);
+    margin-left: calc(100% / var(--num) - 30px);
+  }
+
+  .offset-md-8 {
+    --num: calc(12 / 8);
+    margin-left: calc(100% / var(--num) - 30px);
+  }
+
+  .offset-md-9 {
+    --num: calc(12 / 9);
+    margin-left: calc(100% / var(--num) - 30px);
+  }
+
+  .offset-md-10 {
+    --num: calc(12 / 10);
+    margin-left: calc(100% / var(--num) - 30px);
+  }
+
+  .offset-md-11 {
+    --num: calc(12 / 11);
+    margin-left: calc(100% / var(--num) - 30px);
+  }
+
+  .offset-md-12 {
+    --num: calc(12 / 12);
+    margin-left: calc(100% / var(--num) - 30px);
+  }
 }
 @media (min-width: 1200px) {
   .col-lg-1 {
@@ -407,10 +467,18 @@ header > .container > .row {
 
   nav > ul > li {
     margin-right: 40px;
+    position: relative;
+    line-height: 40px;
   }
 
   .submenu {
     display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    background-color: #95d7ec;
+    padding: 10px;
   }
 
   .submenu.active {
