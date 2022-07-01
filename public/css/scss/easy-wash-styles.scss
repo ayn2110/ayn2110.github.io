@@ -371,3 +371,49 @@ input[type="text"]{
     background-color: $secondry-color;
     cursor: pointer;
 }
+
+
+.position-relative{
+    position: relative;
+}
+.position-absolute{
+    position: absolute;
+}
+.deco-1{
+    right:0px;
+    top:50%;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 100px;
+    background-color: lightgreen;
+}
+
+.deco-2{
+    left:0px;
+    top:40%;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 100px;
+    background-color: lightcoral;
+}
+.page-top{
+    position: fixed;
+    // right:10px;
+    bottom:10px;
+    background-color: green;
+    width: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    display: block;
+    text-align: center;
+    color:white;
+    // display: none;
+    right:-60px;
+    transform: rotate(0deg);
+    transition: all .3s;
+}
+.page-top.active{
+    // display: block;
+    right:10px;
+    transform: rotate(360deg);
+}

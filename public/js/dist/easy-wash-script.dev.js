@@ -55,3 +55,21 @@ $(window).resize(function () {
   } // windowWidth>=768 end
 
 }); // window resize end
+// 捲軸事件
+// 定義捲軸高變數
+
+var offsetTop;
+var product1Top = $('.product-section-1').offset().top;
+$(window).scroll(function () {
+  offsetTop = $(window).scrollTop(); //console.log( '捲軸高', offsetTop )
+  // console.log('product1',product1Top)
+  //    if( offsetTop >=  product1Top){
+  //         console.log('test')
+  //    }
+
+  if (offsetTop >= 900) {
+    $('.page-top').addClass('active');
+  } else {
+    $('.page-top').removeClass('active');
+  }
+}); //scroll end
