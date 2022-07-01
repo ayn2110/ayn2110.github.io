@@ -4,7 +4,7 @@ html
         meta(charset='UTF-8')
         meta(http-equiv='X-UA-Compatible', content='IE=edge')
         meta(name='viewport', content='width=device-width, initial-scale=1.0')
-        title EASY WASH
+        title 聯絡我們|EASY WASH
         link(rel='stylesheet', href='public/css/easy-wash-styles.css')
     body
         header
@@ -36,43 +36,29 @@ html
                                 a(href="faq.html") 常見問題
                             li
                                 a(href="contact.html") 聯絡我們
-        div.banner
-            img(class="img-fluid", src="public/images/banner.jpg", alt="")
-        section.news-section
-            .container
-                h2 最新消息
-                ul
-                    li
-                        span.news-date 2022-06-10
-                        span.news-tag 產品資訊
-                        span.news-title 
-                            a(href="") 裝修好幫手
-                    li
-                        span.news-date 2022-06-10
-                        span.news-tag 產品資訊
-                        span.news-title 
-                            a(href="") 裝修好幫手
-                    li
-                        span.news-date 2022-06-10
-                        span.news-tag 產品資訊
-                        span.news-title 
-                            a(href="") 裝修好幫手
-        section.product-section-1
-            .container
-                .row
-                    .col-12.col-md-6 
-                        img.img-fluid.mb-2.mb-md-0(src="public/images/banner.jpg", alt="")
-                    .col-12.col-md-6
-                        p.product-title 商品名稱
-                        p.product-description 商品描述
-        section.product-section-2
-            .container
-                .row
-                    .col-12.col-md-6 
-                        img.img-fluid.mb-2.mb-md-0(src="public/images/banner.jpg", alt="")
-                    .col-12.col-md-6.order-md-1
-                        p.product-title 商品名稱
-                        p.product-description 商品描述
+        .container
+            .row
+                .col-12.col-md-6.offset-md-3  
+                    form.form(action="javascript:;")
+                        h2.mb-1.text-center 我的會員
+                        .input-group
+                            label(for="account") 帳號
+                            input(type="text" id="account")
+                        .input-group
+                            label(for="account") 密碼
+                            input(type="text" id="account")
+                        .input-group
+                            .w-48
+                                input(type="checkbox", name="")
+                                |記住帳號 
+                            .w-48
+                                a(href="") fb
+                                a(href="") ig
+                                a(href="") line
+                        .input-group.flex-space-between
+                            input.btn-secondry.w-48(type="submit" value="註冊")
+                            input.btn-primary.w-48(type="submit" value="登入") 
+
         footer
             .container
                 .row
