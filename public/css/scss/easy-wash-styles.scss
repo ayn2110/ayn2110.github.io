@@ -130,6 +130,7 @@ header>.container>.row{
 .flex-space-between{
 
 }
+// 小於等於767 手機
 @media (max-width: 767px){
     header>.container>.row{
         align-items: center;
@@ -166,6 +167,7 @@ header>.container>.row{
     }
     
 }
+// 大於等於768 平板~PC~寬
 @media (min-width:768px){
     // .icon-menu{
     //     display: none;

@@ -66,6 +66,7 @@ $(window).scroll(function () {
   //    if( offsetTop >=  product1Top){
   //         console.log('test')
   //    }
+  // 捲軸高度>=900，會出現page-top的按鈕
 
   if (offsetTop >= 900) {
     $('.page-top').addClass('active');
@@ -73,3 +74,10 @@ $(window).scroll(function () {
     $('.page-top').removeClass('active');
   }
 }); //scroll end
+// 點按page-top回到最上方
+
+$('.page-top').on('click', function () {
+  $('html, body').animate({
+    scrollTop: 0
+  });
+}); //.page-top
