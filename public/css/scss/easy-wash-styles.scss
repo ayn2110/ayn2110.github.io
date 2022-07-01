@@ -165,7 +165,12 @@ header>.container>.row{
     .submenu.active{
         display: block;
     }
-    
+    .icon-menu{
+        background-color: lightgray;
+        width: 60px;
+        height: 60px;
+        // background-image: url('../images/logo.svg');
+    }
 }
 // 大於等於768 平板~PC~寬
 @media (min-width:768px){
