@@ -66,8 +66,8 @@ body{
     @for $i from 1 through 12 {
 
         .offset-md-#{$i}{
-            --num: calc(12 / #{$i});
-            margin-left: calc(100% / var(--num) - 30px);
+            --ml: calc(12 / #{$i});
+            margin-left: calc(100% / var(--ml));
         }
     }
 
