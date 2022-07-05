@@ -78,15 +78,21 @@
             console.log(currentLeftNum)
             // 第二層 動畫 left位移一張圖片寬
             $('.child').animate({'margin-left': currentLeftNum})
-            
+
         })// .right-arrow end
 
         $('.left-arrow').on('click',function(){
-            // 每點一次箭頭會扣500
-            currentLeftNum = currentLeftNum + 500
-            console.log(currentLeftNum)
-            // 第二層 動畫 left位移一張圖片寬
-            $('.child').animate({'margin-left': currentLeftNum})
+            if( currentLeftNum == 0 ){
+                // 假如 currentLeftNum == 0，執行這段
+            }else{
+                // 假如 currentLeftNum != 0，執行這段
+                // 每點一次箭頭會扣500
+                currentLeftNum = currentLeftNum + 500
+                // console.log(currentLeftNum)
+                // 第二層 動畫 left位移一張圖片寬
+                $('.child').animate({'margin-left': currentLeftNum})
+
+            }
         })// .left-arrow end
     </script>
 </body>
