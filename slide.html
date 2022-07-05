@@ -73,11 +73,15 @@
     <script>
         let currentLeftNum = 0
         $('.right-arrow').on('click',function(){
-            // 每點一次箭頭會扣500
-            currentLeftNum = currentLeftNum - 500
-            console.log(currentLeftNum)
-            // 第二層 動畫 left位移一張圖片寬
-            $('.child').animate({'margin-left': currentLeftNum})
+            if( currentLeftNum == -1500 ){
+
+            }else{
+                // 每點一次箭頭會扣500
+                currentLeftNum = currentLeftNum - 500
+                console.log(currentLeftNum)
+                // 第二層 動畫 left位移一張圖片寬
+                $('.child').animate({'margin-left': currentLeftNum})
+            }
 
         })// .right-arrow end
 
@@ -92,7 +96,7 @@
                 // 第二層 動畫 left位移一張圖片寬
                 $('.child').animate({'margin-left': currentLeftNum})
 
-            }
+            }// if currentLeftNum end
         })// .left-arrow end
     </script>
 </body>
