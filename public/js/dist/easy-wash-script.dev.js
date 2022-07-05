@@ -1,9 +1,10 @@
 "use strict";
 
-//================
+new WOW().init(); //================
 // 手機版 PC版 menu nav
 //================
 // 定義視窗寬度的變數
+
 var windowWidth = $(window).width(); // 進網頁直接執行一次 判斷
 
 if (windowWidth >= 768) {
@@ -81,8 +82,6 @@ $('.page-top').on('click', function () {
     scrollTop: 0
   });
 }); //.page-top
-// $(window).scroll(function(){
-// }) // scroll end
 
 $('nav>ul>li').on('click', function (e) {
   e.preventDefault(); //當前的li，底下的a，屬性href  / #news #product1 
@@ -99,3 +98,16 @@ $('nav>ul>li').on('click', function (e) {
     scrollTop: $(currentAHref).offset().top - 80
   });
 }); // nav>ul>li end
+
+$(window).scroll(function () {
+  offsetTop = $(window).scrollTop();
+  console.log(offsetTop / 10);
+  gsap.to(".deco-1", {
+    y: -offsetTop / 10,
+    duration: 1
+  });
+  gsap.to(".deco-2", {
+    y: -offsetTop / 5,
+    duration: 1
+  });
+}); // scroll end

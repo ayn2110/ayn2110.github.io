@@ -1,3 +1,5 @@
+new WOW().init();
+
 //================
 // 手機版 PC版 menu nav
 //================
@@ -84,9 +86,6 @@ $('.page-top').on('click', function(){
 })//.page-top
 
 
-// $(window).scroll(function(){
-    
-// }) // scroll end
 
 $('nav>ul>li').on('click',function(e){
     e.preventDefault()
@@ -109,3 +108,12 @@ $('nav>ul>li').on('click',function(e){
     
     
 })// nav>ul>li end
+
+
+$(window).scroll(function(){
+    offsetTop = $(window).scrollTop()
+    console.log(offsetTop/10)
+    gsap.to(".deco-1", {y: -offsetTop/10, duration: 1})
+    gsap.to(".deco-2", {y: -offsetTop/5, duration: 1})
+    
+}) // scroll end

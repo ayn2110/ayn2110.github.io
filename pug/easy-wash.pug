@@ -5,6 +5,7 @@ html
         meta(http-equiv='X-UA-Compatible', content='IE=edge')
         meta(name='viewport', content='width=device-width, initial-scale=1.0')
         title EASY WASH
+        link(rel="stylesheet", href="public/js/WOW-master/css/libs/animate.css")
         link(rel='stylesheet', href='public/css/easy-wash-styles.css')
     body
         header
@@ -39,7 +40,7 @@ html
                                 a(href="contact.html") 聯絡我們
         div.banner
             img(class="img-fluid", src="public/images/banner.jpg", alt="")
-        section#news.news-section
+        section#news.news-section.wow.bounceInRight
             .container
                 h2 最新消息
                 ul
@@ -58,7 +59,9 @@ html
                         span.news-tag 產品資訊
                         span.news-title 
                             a(href="") 裝修好幫手
-        section#product1.product-section-1.position-relative
+        .wow.bounceInLeft
+            h1.text-center 123
+        section#product1.product-section-1.position-relative.wow.bounceInLeft
             .container
                 .row
                     .col-12.col-md-6 
@@ -84,9 +87,9 @@ html
                     .col-12.col-md-3.mb-1 line
                     .col-12.col-md-3.mb-1 fax
                     .col-12.text-center.copyright copyright
-
+        
         a.page-top(href="javascript:;") top
         script(src="https://code.jquery.com/jquery-3.6.0.min.js",integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=",crossorigin="anonymous")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js")
-        
+        script(src="public/js/WOW-master/dist/wow.min.js")
         script(src="public/js/easy-wash-script.js")
