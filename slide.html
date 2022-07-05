@@ -10,7 +10,7 @@
             width: 500px;
             height: 375px;
             margin: auto;
-            /* overflow: hidden; */
+            overflow: hidden;
             /* 相對定位 */
             position: relative;
         }
@@ -35,6 +35,18 @@
         /* .son{
             float: left;
         } */
+        .left-arrow{
+            cursor:pointer;
+            background-color: lightblue;
+            width: 40px;
+            height: 40px;
+        }
+        .right-arrow{
+            cursor:pointer;
+            background-color: pink;
+            width: 40px;
+            height: 40px;
+        }
     </style>
 </head>
 <body>
@@ -62,10 +74,18 @@
             </div> -->
         </div>
     </div>
-
+    <div class="left-arrow"><</div>
+    <div class="right-arrow">></div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
-
+        let currentLeftNum = 0
+        $('.right-arrow').on('click',function(){
+            // 每點一次箭頭會扣500
+            currentLeftNum = currentLeftNum - 500
+            console.log(currentLeftNum)
+            // 第二層 動畫 left位移一張圖片寬
+            $('.child').animate({'left': currentLeftNum})
+        })// .right-arrow end
 
     </script>
 </body>
