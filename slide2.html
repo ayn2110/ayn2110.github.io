@@ -72,6 +72,9 @@
         .indicator>li:last-child{
             margin-right: 0;
         }
+        .indicator>li.active{
+            background-color: tomato;
+        }
     </style>
 </head>
 <body>
@@ -85,7 +88,7 @@
         <div class="left-arrow"><</div>
         <div class="right-arrow">></div>
         <ol class="indicator">
-            <li></li>
+            <li class="active"></li>
             <li></li>
             <li></li>
             <li></li>
@@ -120,6 +123,11 @@
 
             }// if currentLeftNum end
         })// .left-arrow end
+
+        $('.indicator>li').on('click',function(){
+            $(this).addClass('active')
+            $(this).siblings().removeClass('active')
+        })//.indicator>li end
     </script>
 </body>
 </html>
