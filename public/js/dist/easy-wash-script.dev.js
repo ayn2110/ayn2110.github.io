@@ -31,7 +31,9 @@ if (windowWidth >= 768) {
 
 
 $(window).resize(function () {
-  // widthWidth 在每次縮放視窗寬度時，換上當前的視窗寬度的數值
+  gsapAnimate();
+  console.log($(window).width()); // widthWidth 在每次縮放視窗寬度時，換上當前的視窗寬度的數值
+
   windowWidth = $(window).width();
 
   if (windowWidth >= 768) {
@@ -99,15 +101,35 @@ $('nav>ul>li').on('click', function (e) {
   });
 }); // nav>ul>li end
 
-$(window).scroll(function () {
-  offsetTop = $(window).scrollTop();
-  console.log(offsetTop / 10);
-  gsap.to(".deco-1", {
-    y: -offsetTop / 10,
-    duration: 1
-  });
-  gsap.to(".deco-2", {
-    y: -offsetTop / 5,
-    duration: 1
-  });
-}); // scroll end
+function gsapAnimate() {
+  // console.log('gsap')
+  if ($(window).width() >= 768) {
+    $(window).scroll(function () {
+      offsetTop = $(window).scrollTop(); // console.log(offsetTop/10)
+
+      gsap.to(".deco-1", {
+        y: -offsetTop / 10,
+        duration: 1
+      });
+      gsap.to(".deco-2", {
+        y: -offsetTop / 5,
+        duration: 1
+      });
+    }); // scroll end
+  } else {
+    $(window).scroll(function () {
+      offsetTop = $(window).scrollTop(); // console.log(offsetTop/3)
+
+      gsap.to(".deco-1", {
+        y: -offsetTop / 5,
+        duration: 1
+      });
+      gsap.to(".deco-2", {
+        y: -offsetTop / 3,
+        duration: 1
+      });
+    }); // scroll end
+  }
+}
+
+gsapAnimate();
