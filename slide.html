@@ -8,21 +8,14 @@
         .parent{
             /* 可視範圍寬 */
             width: 500px;
-            height: 375px;
             margin: auto;
             overflow: hidden;
-            /* 相對定位 */
-            position: relative;
         }
         .child{
             /* 圖片寬度*項目個數 */
             width: 2000px;
             /* 去除行內空白，文字大小0 */
             font-size: 0;
-            /* 絕對定位 */
-            position: absolute;
-            top:0;
-            left:0;
         }
         h1{
             font-size: 40px;
@@ -84,9 +77,16 @@
             currentLeftNum = currentLeftNum - 500
             console.log(currentLeftNum)
             // 第二層 動畫 left位移一張圖片寬
-            $('.child').animate({'left': currentLeftNum})
+            $('.child').animate({'margin-left': currentLeftNum})
         })// .right-arrow end
 
+        $('.left-arrow').on('click',function(){
+            // 每點一次箭頭會扣500
+            currentLeftNum = currentLeftNum + 500
+            console.log(currentLeftNum)
+            // 第二層 動畫 left位移一張圖片寬
+            $('.child').animate({'margin-left': currentLeftNum})
+        })// .left-arrow end
     </script>
 </body>
 </html>
