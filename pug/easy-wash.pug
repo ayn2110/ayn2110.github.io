@@ -18,14 +18,14 @@ html
                     nav
                         ul
                             li
-                                a(href="about.html") 關於我們
+                                a(href="#news") 最新消息
                             li
-                                a(href="javascript:;") 產品列表
-                                ul.submenu
-                                    li
-                                        a(href="product-list.html") 分類1
-                                    li
-                                        a(href="product-list.html") 分類2
+                                a(href="#product1") 產品列表
+                                //- ul.submenu
+                                //-     li
+                                //-         a(href="product-list.html") 分類1
+                                //-     li
+                                //-         a(href="product-list.html") 分類2
                             li
                                 a(href="javascrip:;") 顧客心得
                                 ul.submenu
@@ -39,7 +39,7 @@ html
                                 a(href="contact.html") 聯絡我們
         div.banner
             img(class="img-fluid", src="public/images/banner.jpg", alt="")
-        section.news-section
+        section#news.news-section
             .container
                 h2 最新消息
                 ul
@@ -58,7 +58,7 @@ html
                         span.news-tag 產品資訊
                         span.news-title 
                             a(href="") 裝修好幫手
-        section.product-section-1.position-relative
+        section#product1.product-section-1.position-relative
             .container
                 .row
                     .col-12.col-md-6 

@@ -82,3 +82,30 @@ $(window).scroll(function(){
 $('.page-top').on('click', function(){
     $('html, body').animate({ scrollTop: 0 })
 })//.page-top
+
+
+// $(window).scroll(function(){
+    
+// }) // scroll end
+
+$('nav>ul>li').on('click',function(e){
+    e.preventDefault()
+
+    //當前的li，底下的a，屬性href  / #news #product1 
+    // console.log( $(this).find('a').attr('href') )
+    
+    // 指定叫做 "當前的li，底下的a，屬性href" 的選取器
+    // console.log( $( $(this).find('a').attr('href') ) )
+
+    // console.log($( $($(this).find('a').attr('href')).offset().top ))
+
+    // 指定一個名為currentAHref變數找到當前的 href (字串)
+    let currentAHref = $(this).find('a').attr('href')
+    
+    // 包在$()內變成選取器找到的元素名稱，並得到位移的高度
+    // console.log( $(currentAHref).offset().top)
+
+    $('html,body').animate({scrollTop: $(currentAHref).offset().top - 80 })
+    
+    
+})// nav>ul>li end
