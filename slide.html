@@ -3,14 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>slide</title>
     <style>
-
-        
+        .parent{
+            /* 可視範圍寬 */
+            width: 500px;
+            height: 375px;
+            margin: auto;
+            overflow: hidden;
+            /* 相對定位 */
+            position: relative;
+        }
+        .child{
+            /* 圖片寬度*項目個數 */
+            width: 2000px;
+            /* 去除行內空白，文字大小0 */
+            font-size: 0;
+            /* 絕對定位 */
+            position: absolute;
+            top:0;
+            left:0;
+        }
+        .parent img{
+            /* 同.parent寬 */
+            width: 500px;
+            /* div時用float */
+        }
     </style>
 </head>
 <body>
-    
+    <div class="parent">
+        <div class="child">
+           
+            <img src="public/images/shiitake1.jpg" alt="">
+            <img src="public/images/shiitake2.jpg" alt="">
+            <img src="public/images/shiitake3.jpg" alt="">
+            <img src="public/images/shiitake4.jpg" alt="">
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
