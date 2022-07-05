@@ -10,6 +10,7 @@
             width: 500px;
             margin: auto;
             overflow: hidden;
+            position: relative;
         }
         .child{
             /* 圖片寬度*項目個數 */
@@ -28,17 +29,26 @@
         /* .son{
             float: left;
         } */
-        .left-arrow{
+        .left-arrow, .right-arrow{
+            position: absolute;
             cursor:pointer;
-            background-color: lightblue;
+            /* background-color: rgba(255, 255, 255, 0.52); */
             width: 40px;
-            height: 40px;
+            /* height: 40px; */
+            height: 100%;
+            top:0px;
+            /* top:50%; */
+            /* transform: translateY(-50%); */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color:white;
+        }
+        .left-arrow{
+            left:0px;
         }
         .right-arrow{
-            cursor:pointer;
-            background-color: pink;
-            width: 40px;
-            height: 40px;
+            right:0px;
         }
     </style>
 </head>
@@ -49,26 +59,10 @@
             <img src="public/images/shiitake2.jpg" alt="">
             <img src="public/images/shiitake3.jpg" alt="">
             <img src="public/images/shiitake4.jpg" alt="">
-            <!-- <div class="son">
-                <h1>shiitake 1</h1>
-                <img src="public/images/shiitake1.jpg" alt="">
-            </div>
-            <div class="son">
-                <h1>shiitake 2</h1>
-                <img src="public/images/shiitake2.jpg" alt="">
-            </div>
-            <div class="son">
-                <h1>shiitake 2</h1>
-                <img src="public/images/shiitake2.jpg" alt="">
-            </div>
-            <div class="son">
-                <h1>shiitake 2</h1>
-                <img src="public/images/shiitake2.jpg" alt="">
-            </div> -->
         </div>
+        <div class="left-arrow"><</div>
+        <div class="right-arrow">></div>
     </div>
-    <div class="left-arrow"><</div>
-    <div class="right-arrow">></div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
         let currentLeftNum = 0
