@@ -7,6 +7,7 @@
     <style>
         body{
             margin: 0;
+            /* overflow-x: hidden; */
         }
         .parent{
             /* 可視範圍寬 */
@@ -101,12 +102,17 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
-        let currentLeftNum  = 0 //左邊位移的距離(0/-??)
+        //第二層裡面最前面 補上 圖片陣列中的最後一個 的複製元素
+        $('.child').prepend( $('.child>img').last().clone() )
+        //第二層裡面最後面 補上 圖片陣列中的第二個 的複製元素
+        $('.child').append( $('.child>img').eq(1).clone() )
         let currentNum      = 1 //當前的數字
         let parentWidth     = $('.parent').width() //父層寬度
         let imgLength       = $('.child>img').length //子層圖片個數
         let childTotalWidth = parentWidth * imgLength //父層寬度*子層圖片個數
-
+        //調整第二層一開始位移的位置
+        $('.child').css({'margin-left': -parentWidth * currentNum})
+                                        //-500 * (1)
         $('.child').width( childTotalWidth ) //子層總寬 = 父層寬度*子層圖片個數(進到畫面讀一次)
         $('.child>img').width( parentWidth ) //子層下的圖片寬 = 父層寬度
 
