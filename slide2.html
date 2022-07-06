@@ -98,10 +98,11 @@
             align-items: center;
             /* left:-50vw */
             /* display: none; */
+            transition: .3s all;
+            /* transition-delay: 1s; */
         }
         .loading-overlay.active{
             top:-100vh;
-            transition: .3s all;
         }
         .loader {
             border: 16px solid #f3f3f3; /* Light grey */
@@ -142,9 +143,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
         
-        $(window).on('load',function(){
-            $('.loading-overlay').addClass('active')
-        })
+       
 
         $('.child').prepend( $('.child>img').last().clone() ) //第二層裡面最前面 補上 圖片陣列中的最後一個 的複製元素
         $('.child').append( $('.child>img').eq(1).clone()) //第二層裡面最後面 補上 圖片陣列中的第二個 的複製元素
@@ -157,6 +156,20 @@
         $('.child').css({'margin-left': -parentWidth * currentNum}) //調整第二層一開始位移的位置
         $('.child').width( childTotalWidth ) //子層總寬 = 父層寬度*子層圖片個數(進到畫面讀一次)
         $('.child>img').width( parentWidth ) //子層下的圖片寬 = 父層寬度
+
+        $(window).on('load',function(){
+            $('.loading-overlay').addClass('active')
+            parentWidth = $('.parent').width()
+            childTotalWidth = parentWidth * imgLength
+            $('.child').css({'margin-left': -parentWidth * currentNum})
+            $('.child').width( childTotalWidth ) 
+            $('.child>img').width( parentWidth )
+
+
+
+        })
+
+
 
         // 縮放時的變化
         $(window).resize(function(){
