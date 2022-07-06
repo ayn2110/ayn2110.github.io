@@ -136,9 +136,6 @@
         <div class="right-arrow">></div>
         <ol class="indicator">
             <li class="active"></li>
-            <li></li>
-            <li></li>
-            <li></li>
         </ol>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -170,7 +167,10 @@
             $('.child>img').width( parentWidth )
         })// window load end
 
-
+        // for 迴圈 從0到圖片總數-2 的條件下，i累加1
+        for (let i = 0; i < imgLength-3; i++){
+            $('.indicator>li.active').after('<li></li>')
+        }
 
         // 縮放時的變化
         $(window).resize(function(){
@@ -188,7 +188,7 @@
             if( currentNum == imgLength - 1 ){ //假如當前的數字相等於圖片總數
 
             }else{
-                console.log(currentNum, imgLength)
+                // console.log(currentNum, imgLength)
                 currentNum = currentNum + 1 //當前數字累加1
                 common()
                 // $('.child').animate({'margin-left': -parentWidth * (currentNum - 1)})
@@ -239,11 +239,9 @@
 
         setInterval(function() {
             $('.right-arrow').click()
-        }, 3000)
+        }, 5000)
 
-        // $('.indicator').each(function(){
-        //     $()
-        // })
+     
     </script>
 </body>
 </html>
