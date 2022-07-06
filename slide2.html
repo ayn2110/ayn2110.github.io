@@ -13,9 +13,9 @@
             /* 可視範圍寬 */
             /* width: 500px; */
             width:95%;
-            max-width: 600px;
+            /* max-width: 600px; */
             margin: auto;
-            /* overflow: hidden; */
+            overflow: hidden;
             position: relative;
         }
         .child{
@@ -114,6 +114,18 @@
         $('.child').css({'margin-left': -parentWidth * currentNum}) //調整第二層一開始位移的位置
         $('.child').width( childTotalWidth ) //子層總寬 = 父層寬度*子層圖片個數(進到畫面讀一次)
         $('.child>img').width( parentWidth ) //子層下的圖片寬 = 父層寬度
+
+        // 縮放時的變化
+        $(window).resize(function(){
+            parentWidth = $('.parent').width()
+            childTotalWidth = parentWidth * imgLength
+            $('.child').css({'margin-left': -parentWidth * currentNum})
+            $('.child').width( childTotalWidth ) 
+            $('.child>img').width( parentWidth )
+        })//window resize end
+
+
+
 
         $('.right-arrow').on('click',function(){
             if( currentNum == imgLength - 1 ){ //假如當前的數字相等於圖片總數
