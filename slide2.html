@@ -5,16 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>slide</title>
     <style>
+        body{
+            margin: 0;
+        }
         .parent{
             /* 可視範圍寬 */
-            width: 500px;
+            /* width: 500px; */
+            width:95%;
+            max-width: 1140px;
             margin: auto;
             overflow: hidden;
             position: relative;
         }
         .child{
             /* 圖片寬度*項目個數 */
-            width: 2000px;
+            /* width: 2000px; */
             /* 去除行內空白，文字大小0 */
             font-size: 0;
         }
@@ -96,14 +101,22 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
-        let currentLeftNum = 0
+        let currentLeftNum  = 0 //左邊位移的距離(0/-??)
+        let currentNum      = 1 //當前的數字
+        let parentWidth     = $('.parent').width() //父層寬度
+        let imgLength       = $('.child>img').length //子層個數
+        let childTotalWidth = parentWidth * imgLength //父層寬度*子層個數
+
+        $('.child').width( childTotalWidth ) //子層總寬 = 父層寬度*子層個數(進到畫面讀一次)
+        $('.child>img').width( parentWidth ) //子層下的圖片寬 = 父層寬度
+
         $('.right-arrow').on('click',function(){
             if( currentLeftNum == -1500 ){
 
             }else{
                 // 每點一次箭頭會扣500
                 currentLeftNum = currentLeftNum - 500
-                console.log(currentLeftNum)
+                // console.log(currentLeftNum)
                 // 第二層 動畫 left位移一張圖片寬
                 $('.child').animate({'margin-left': currentLeftNum})
             }
@@ -117,7 +130,7 @@
                 // 假如 currentLeftNum != 0，執行這段
                 // 每點一次箭頭會扣500
                 currentLeftNum = currentLeftNum + 500
-                // console.log(currentLeftNum)
+                console.log(currentLeftNum)
                 // 第二層 動畫 left位移一張圖片寬
                 $('.child').animate({'margin-left': currentLeftNum})
 
