@@ -38,7 +38,7 @@
         .left-arrow, .right-arrow{
             position: absolute;
             cursor:pointer;
-            background-color: white;
+            background-color: black;
             border:2px solid black;
             width: 40px;
             height: 40px;
@@ -50,15 +50,21 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color:black;
+            color:white;
         }
         .left-arrow{
-            right:52px;
-            bottom:40px;
+            top:50%;
+            right:42px;
+            transform: translateY(-50%);
+
+            /* bottom:40px; */
         }
         .right-arrow{
-            right:10px;
-            bottom:10px
+            top:50%;
+            transform: translateY(-50%);
+            right:0px;
+            /* bottom:10px */
+            border-left: 1px solid gray;
         }
         .indicator{
             list-style-type: none;
@@ -145,7 +151,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
         
-        console.log('一開始執行',$('img').height())
+        // console.log('一開始執行',$('img').height())
 
         $('.child').prepend( $('.child>img').last().clone() ) //第二層裡面最前面 補上 圖片陣列中的最後一個 的複製元素
         $('.child').append( $('.child>img').eq(1).clone()) //第二層裡面最後面 補上 圖片陣列中的第二個 的複製元素
