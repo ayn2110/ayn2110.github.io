@@ -104,7 +104,7 @@
     <script>
         
         $('.child').prepend( $('.child>img').last().clone() ) //第二層裡面最前面 補上 圖片陣列中的最後一個 的複製元素
-        $('.child').append( $('.child>img').eq(1).clone() ) //第二層裡面最後面 補上 圖片陣列中的第二個 的複製元素
+        $('.child').append( $('.child>img').eq(1).clone()) //第二層裡面最後面 補上 圖片陣列中的第二個 的複製元素
         
         let currentNum      = 1 //當前的數字
         let parentWidth     = $('.parent').width() //父層寬度
@@ -155,6 +155,9 @@
                 // 假如當前的數字 相等於 總數 - 1 
                 if( currentNum == imgLength - 1 ){
                     currentNum = 1
+                }
+                if( currentNum == 0 ){
+                    currentNum = imgLength - 2
                 }
                 // 前面動畫跑完時執行
                 $('.child').css({'margin-left': -parentWidth * currentNum})
