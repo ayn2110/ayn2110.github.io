@@ -123,6 +123,7 @@
     <div class="loading-overlay">
         <div class="loader"></div>
     </div>
+    <!-- <img src="public/images/shiitake1.jpg" alt=""> -->
 
     <div class="parent">
         <div class="child">
@@ -143,7 +144,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
         
-       
+        console.log('一開始執行',$('img').height())
 
         $('.child').prepend( $('.child>img').last().clone() ) //第二層裡面最前面 補上 圖片陣列中的最後一個 的複製元素
         $('.child').append( $('.child>img').eq(1).clone()) //第二層裡面最後面 補上 圖片陣列中的第二個 的複製元素
@@ -158,8 +159,10 @@
         $('.child>img').width( parentWidth ) //子層下的圖片寬 = 父層寬度
 
         $(window).on('load',function(){
+            // console.log('window load',$('img').height())
+
             $('.loading-overlay').addClass('active')
-            
+
             parentWidth = $('.parent').width()
             childTotalWidth = parentWidth * imgLength
             $('.child').css({'margin-left': -parentWidth * currentNum})
