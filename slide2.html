@@ -127,7 +127,7 @@
         })// .right-arrow end
 
         $('.left-arrow').on('click',function(){
-            if ( currentNum == 1 ){
+            if ( currentNum == 0 ){
 
             }else{
                 currentNum = currentNum - 1
@@ -150,7 +150,7 @@
         
         function common(){
             // $('.child').animate({'margin-left': -parentWidth * currentNum},callback)
-            $('.child').animate({'margin-left': -parentWidth * currentNum},2000, function(){
+            $('.child').animate({'margin-left': -parentWidth * currentNum},400, function(){
                 //==== callback 函式執行完之後執行=====
                 // 假如當前的數字 相等於 總數 - 1 
                 if( currentNum == imgLength - 1 ){
