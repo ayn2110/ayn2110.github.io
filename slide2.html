@@ -150,17 +150,18 @@
         
         function common(){
             // $('.child').animate({'margin-left': -parentWidth * currentNum},callback)
-            $('.child').animate({'margin-left': -parentWidth * currentNum}, function(){
-                // callback 函式執行完之後執行
-                // if( currentNum == imgLength - 1 ){
-                //     $('.child').css({'margin-left': -parentWidth * 1})
-
-                // }
-            })
-            
-            
-            $('.indicator>li').eq(currentNum - 1).addClass('active')
-            $('.indicator>li').eq(currentNum - 1).siblings().removeClass('active')
+            $('.child').animate({'margin-left': -parentWidth * currentNum},2000, function(){
+                //==== callback 函式執行完之後執行=====
+                // 假如當前的數字 相等於 總數 - 1 
+                if( currentNum == imgLength - 1 ){
+                    currentNum = 1
+                }
+                // 前面動畫跑完時執行
+                $('.child').css({'margin-left': -parentWidth * currentNum})
+                $('.indicator>li').eq(currentNum - 1).addClass('active')
+                $('.indicator>li').eq(currentNum - 1).siblings().removeClass('active')
+                
+            }) //callback end
             
         } // common() end
     </script>
