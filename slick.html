@@ -11,14 +11,31 @@
     <style>
         body{
             background-color: pink;
+            margin: 0;
         }
         .banner{
+            width: 100%;
+            /* max-width: 600px; */
+            margin: auto;
+        }
+        .banner2{
             width: 100%;
             max-width: 600px;
             margin: auto;
         }
+
         .banner img{
-            margin: 10px;
+            /* margin: 10px; */
+        }
+        .slick-prev{
+            /* left:25px; */
+            z-index: 10;
+        }
+        .slick-next{
+            /* right:25px */
+        }
+        .slick-next:before, .slick-prev:before{
+            color:green;
         }
     </style>
 </head>
@@ -35,7 +52,11 @@
         <img src="public/images/shiitake4.jpg" alt="">
         <img src="public/images/shiitake4.jpg" alt="">
     </div>
-
+    <div class="banner2">
+        <img src="public/images/shiitake1.jpg" alt="">
+        <img src="public/images/shiitake2.jpg" alt="">
+        <img src="public/images/shiitake3.jpg" alt="">
+    </div>
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- slick js -->
@@ -43,40 +64,19 @@
     <!-- 自定義 js -->
     <script>
         $('.banner').slick({
-            dots: true,
-            infinite: false,
-            speed: 300,
-            slidesToShow: 4,
-            slidesToScroll: 4,
-            responsive: [
-                {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    infinite: true,
-                    dots: true
-                }
-                },
-                {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                }
-                },
-                {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-                }
-                // You can unslick at a given breakpoint now by adding:
-                // settings: "unslick"
-                // instead of a settings object
-            ]
-            });
+            autoplay: true,
+            slidesToShow: 3,
+            autoplaySpeed: 0,
+            speed: 30000,
+            arrows: false,
+            infinite: true,
+            cssEase: "linear",
+
+        })
+        $('.banner2').slick({
+            // prevArrow: '<a href="javascript:;" class="banner-left-btn">左</a>',
+            // nextArrow: '<a href="javascript:;" class="banner-right-btn">右</a>'
+        })
     </script>
 </body>
 </html>
