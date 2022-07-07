@@ -131,6 +131,10 @@
             <img src="public/images/shiitake2.jpg" alt="">
             <img src="public/images/shiitake3.jpg" alt="">
             <img src="public/images/shiitake4.jpg" alt="">
+            <img src="public/images/shiitake4.jpg" alt="">
+            <img src="public/images/shiitake4.jpg" alt="">
+            <img src="public/images/shiitake4.jpg" alt="">
+            <img src="public/images/shiitake4.jpg" alt="">
         </div>
         <div class="left-arrow"><</div>
         <div class="right-arrow">></div>
@@ -150,10 +154,10 @@
         let parentWidth     = $('.parent').width() //父層寬度
         let imgLength       = $('.child>img').length //子層圖片個數
         let childTotalWidth = parentWidth * imgLength //父層寬度*子層圖片個數
-  
+        let childWidth      = parentWidth / 3
         $('.child').css({'margin-left': -parentWidth * currentNum}) //調整第二層一開始位移的位置
         $('.child').width( childTotalWidth ) //子層總寬 = 父層寬度*子層圖片個數(進到畫面讀一次)
-        $('.child>img').width( parentWidth ) //子層下的圖片寬 = 父層寬度
+        $('.child>img').width( childWidth ) //子層下的圖片寬 = 父層寬度
 
         $(window).on('load',function(){
             // console.log('window load',$('img').height())
@@ -161,10 +165,10 @@
             $('.loading-overlay').addClass('active')
 
             parentWidth = $('.parent').width()
-            childTotalWidth = parentWidth * imgLength
+            childTotalWidth = parentWidth / 3 * imgLength
             $('.child').css({'margin-left': -parentWidth * currentNum})
             $('.child').width( childTotalWidth ) 
-            $('.child>img').width( parentWidth )
+            $('.child>img').width( childWidth )
         })// window load end
 
         // for 迴圈 從0到圖片總數-2 的條件下，i累加1
